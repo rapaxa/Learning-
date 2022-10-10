@@ -1,4 +1,10 @@
-body{
-  color: black;
-  background-color: salmon;
+@import url(../blocks/_promo.scss);
+
+.container{
+  font-family: 'Silkscreen', cursive;
+  max-width: 950px;
+  margin:0 auto;
+  list-style: none;
+
 }
+@import "../blocks/_header.scss";

@@ -1,4 +1,1 @@
-body {
-  color: black;
-  background-color: black;
-}
+.promo{min-height:600px;padding:21px 0 93px 0;background:url(../img/background.jpeg) center/cover no-repeat}.container{font-family:Silkscreen,cursive;max-width:950px;margin:0 auto;list-style:none}.header{display:flex;justify-content:space-between;align-items:center}.header__logo{width:50px}.header__logo img{width:100%}.header .menu{width:50%;display:flex;justify-content:space-around}.header .menu__item{font-size:20px;color:#fff}.header__phone{font-size:15px;text-decoration:none;color:#fff}
