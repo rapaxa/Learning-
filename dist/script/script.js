@@ -1,32 +1,30 @@
-const menuHeader = document.querySelectorAll(".menu__item")
-const menu = document.querySelector('.menu')
-function hideTabContent() {
-    menuHeader.forEach(item => {
-        item.classList.add('hide');
-        item.classList.remove('active');
-    });
 
+function show(name){
+    name.classList.remove('hide')
+    name.classList.add('active')
 }
-function showTabContent(i = 0) {
-    menuHeader[i].classList.remove('hide');
-    menuHeader[i].classList.add('active');
+function hide(name){
+    name.classList.remove('active')
+    name.classList.add('hide')
 }
-function getActiveItem(name) {
-
-        menu.addEventListener('click', function (event)  {
-            const target = event.target;
-            if (target && menu.classList.contains('active'))
-
-            name.forEach(item => {
-                if(event.target === item) {
-                    hideTabContent()
-                    showTabContent()
+function tabMenu(){
+    const menuHeader = document.querySelectorAll(".menu__item")
+    const menu = document.querySelector('.menu')
+    const target = event.target;
+    if(target && target.classList.contains('menu__item')) {
+        menuHeader.forEach((item,i) => {
+            item.addEventListener('click', (e) => {
+                if (e.target === item) {
+                    hide(item)
+                } else {
+                    show(item)
 
                 }
+
+            })
+
         })
-
-    })
-}
-
-getActiveItem(menuHeader)
+    }
+    }
+    tabMenu()
 

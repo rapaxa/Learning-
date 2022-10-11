@@ -1,9 +1,12 @@
 .header {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
+  position:fixed;
+  z-index:1000;
+  width: 67%;
+
   &__logo {
     width: 50px;
 
@@ -15,6 +18,9 @@
   .active{
     border-bottom: 3px solid red;
 }
+  .hide{
+    border-bottom: none;
+  }
   .menu {
     width: 50%;
     display: flex;
