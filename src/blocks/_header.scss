@@ -1,8 +1,9 @@
 .header {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  background: rgba(0, 0, 0, 0.5);
   &__logo {
     width: 50px;
 
@@ -11,20 +12,45 @@
     }
 
   }
-
+  .active{
+    border-bottom: 3px solid red;
+}
   .menu {
     width: 50%;
     display: flex;
     justify-content: space-around;
 
+
     &__item {
+
+      display: flex;
       font-size: 20px;
       color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+
+      &:hover{
+        cursor: grab;
+        border-bottom: 3px solid red;
+
+      }
     }
   }
-  &__phone{
+
+  &__phone {
     font-size: 15px;
     text-decoration: none;
-    color:white;
+    color: white;
+    padding-bottom: 10%;
   }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  @import "button";
+
+
 }

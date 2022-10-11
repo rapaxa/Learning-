@@ -2,9 +2,14 @@
 
 .container{
   font-family: 'Silkscreen', cursive;
-  max-width: 950px;
+  max-width: 1240px;
   margin:0 auto;
   list-style: none;
 
 }
+
 @import "../blocks/_header.scss";
+@import "src/blocks/promo_2";
+@import "src/blocks/_main";
+
+@import "src/blocks/block";
