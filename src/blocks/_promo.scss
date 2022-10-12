@@ -1,8 +1,13 @@
-.promo{
+.promo {
   min-height: 677px;
   max-height: 600px;
+  display: flex;
 
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 21px 0 93px 0;
   background: url(../img/background.jpeg) center/cover no-repeat;
+
 
 }

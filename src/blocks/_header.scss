@@ -1,14 +1,15 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
+  min-width: 560px;
+  height: 10%;
+  margin: 0 auto;
   align-items: center;
+  position: fixed;
+  width: 60%;
   background: rgba(0, 0, 0, 0.5);
-  position:fixed;
-  z-index:1000;
-  width: 67%;
-
   &__logo {
-    width: 50px;
+    width: 6%;
 
     img {
       width: 100%;
@@ -22,9 +23,10 @@
     border-bottom: none;
   }
   .menu {
-    width: 50%;
+    width: 70%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 
 
     &__item {
