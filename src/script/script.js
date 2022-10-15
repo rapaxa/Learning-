@@ -1,30 +1,28 @@
-
-function show(name){
-    name.classList.remove('hide')
-    name.classList.add('active')
-}
-function hide(name){
-    name.classList.remove('active')
-    name.classList.add('hide')
-}
-function tabMenu(){
-    const menuHeader = document.querySelectorAll(".menu__item")
-    const menu = document.querySelector('.menu')
-    const target = event.target;
-    if(target && target.classList.contains('menu__item')) {
-        menuHeader.forEach((item,i) => {
-            item.addEventListener('click', (e) => {
-                if (e.target === item) {
-                    hide(item)
-                } else {
-                    show(item)
-
-                }
-
-            })
-
-        })
+const modalButton = document.getElementById('header__btn')
+const modalClose = document.getElementById('close__btn')
+function modalHeader() {
+    const modal = document.querySelector('.promo__modal')
+    const stat = modal.style.display;
+    if(stat === 'flex'){
+        modal.style.display = 'none'
+    }else{
+        modal.style.display = 'flex'
     }
-    }
-    tabMenu()
+
+}
+function modalOpen(name){
+    name.addEventListener('click', (e) => {
+        modalHeader()
+    })
+}
+
+
+modalOpen(modalButton)
+modalOpen(modalClose)
+// modalButton.addEventListener('click', (e) => {
+//     modalHeader()
+// })
+// modalClose.addEventListener('click', (e) => {
+//     modalHeader()
+// })
 

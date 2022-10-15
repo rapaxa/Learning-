@@ -1,25 +1,22 @@
-@import url(../blocks/_promo.scss);
+@import "../blocks/_promo.scss";
 
 .container {
   font-family: 'Silkscreen', cursive;
   max-width: 960px;
   margin: 0 auto;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  .promo__wrapper{
-    margin-top: 20%;
-    &__text{
-      display: flex;
-      color: white;
-      font-size: 60px;
-      text-align: center;
-    }
+
+  .text__block{
+    color: white;
+    text-align: center;
+    margin-top: 90px;
   }
+
+
 }
 
 @import "../blocks/_header.scss";
 @import "src/blocks/promo_2";
 @import "src/blocks/_main";
-
+@import "src/blocks/modal";
 @import "src/blocks/block";
