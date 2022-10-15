@@ -1,7 +1,7 @@
 const gulp        = require('gulp');
 const browserSync = require('browser-sync');
 const sass        = require('gulp-sass')(require('sass'));
-const cleanCSS = require('gulp-clean-css');
+// const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 gulp.task('html',function (){
@@ -30,16 +30,16 @@ gulp.task('server', function() {
 
 gulp.task('styles', function() {
     return gulp.src("src/**/*.+(scss|sass)")
-        .pipe(sass())
-        .pipe(rename({suffix: '', prefix: ''}))
-        .pipe(autoprefixer())
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        // .pipe(rename({suffix: '', prefix: ''}))
+        // .pipe(autoprefixer())
+        // .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("dist/"))
         .pipe(browserSync.stream());
 });
 
 gulp.task('watch', function() {
-    gulp.watch("src/**/*.+(scss|sass)", gulp.parallel('styles'));
+    gulp.watch("src/**/*.scss", gulp.parallel('styles'));
     gulp.watch("src/**/*.html", gulp.parallel('html'));
     gulp.watch("src/**/*.js", gulp.parallel('script'));
 })

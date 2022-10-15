@@ -2,12 +2,25 @@
   min-height: 677px;
   max-height: 600px;
   display: flex;
-
   align-content: center;
   flex-direction: column;
-  justify-content: space-between;
+
   padding: 21px 0 93px 0;
   background: url(../img/background.jpeg) center/cover no-repeat;
+  /* Черный с непрозрачностью */
 
+  &__wrapper{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    &__text{
+      display: flex;
+      color: white;
 
+      font-size: 60px;
+
+      text-align: center;
+    }
+  }
 }
+
