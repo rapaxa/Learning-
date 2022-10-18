@@ -1,16 +1,14 @@
 .promo {
-  min-height: 677px;
-  max-height: 600px;
+  min-width: 500px;
   display: flex;
   align-content: center;
   flex-direction: column;
-
-  padding: 21px 0 93px 0;
+  padding: 3% 0 17% 0;
   background: url(../img/background.jpeg) center/cover no-repeat;
   /* Черный с непрозрачностью */
 
   &__wrapper{
-    margin-top: 200px;
+    margin-top: 20%;
     display: flex;
     justify-content: center;
     &__text{
